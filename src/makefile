@@ -1,14 +1,14 @@
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror -g -std=gnu11 -pthread
 
-TARGET = myshell
-OBJS = myshell.o threads.o commands.o
+TARGET = promptshell
+OBJS = promptshell.o threads.o commands.o
 
 $(TARGET): $(OBJS)
 	$(CC) $(CFLAGS) -o $(TARGET) $(OBJS)
 
-myshell.o: myshell.c myshell.h
-	$(CC) $(CFLAGS) -c myshell.c
+promptshell.o: promptshell.c promptshell.h
+	$(CC) $(CFLAGS) -c promptshell.c
 
 threads.o: threads.c threads.h
 	$(CC) $(CFLAGS) -c threads.c
